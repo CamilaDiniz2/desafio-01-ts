@@ -1,0 +1,57 @@
+.task {
+  background: var(--gray-500);
+  color: var(--gray-100);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+}
+
+.task main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.task main .checkboxRadio {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  line-height: 0;
+}
+
+.task main .checkboxRadio span {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.task main .checkboxRadio:hover {
+  opacity: 0.8;
+}
+
+.task main .taskNotCompleted {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--gray-100);
+}
+
+.task main .taskCompleted {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.deleteTask {
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--gray-100);
+  border: 0;
+  overflow: hidden;
+}
+
+.deleteTask:hover {
+  color: var(--red-300);
+  background: var(--gray-400);
+}

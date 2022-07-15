@@ -1,0 +1,142 @@
+.todolist {
+  max-width: 50rem;
+  padding: 2rem;
+  margin: -3rem auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  max-width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.form > textarea {
+  width: 37.75rem;
+  height: 3.5rem;
+  padding: 1rem;
+  resize: none;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--gray-500);
+  line-height: 1.4;
+  color: var(--gray-300);
+}
+
+.form footer button[type='submit'] {
+  padding: 1.25rem 1.5rem;
+
+  border-radius: 8px;
+  background: var(--blue-600);
+  color: var(--white);
+  border: 0;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  gap: 4px;
+
+  font-size: 0.875rem;
+}
+
+.form footer button[type='submit']:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form footer button[type='submit']:not(:disabled):hover {
+  background: var(--blue-300);
+  transition: 0.2s;
+}
+
+.infoToDoList {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.infoToDoList strong {
+  color: var(--blue-300);
+  font-size: 0.875rem;
+}
+
+.infoToDoList strong span {
+  color: var(--white);
+  background: var(--gray-500);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+.listOfTasks {
+  margin-top: 1.5rem;
+}
+
+.mainwithouttasks {
+  border-top: 1px solid var(--gray-200);
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem;
+}
+
+.mainwithouttasks strong {
+  padding: 1rem 0 0.5rem;
+}
+
+@media (max-width: 912px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    max-width: 80%;
+    gap: 0;
+
+    margin-bottom: 2rem;
+  }
+
+  .form > textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form footer button[type='submit'] {
+    width: 12rem;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width:300px){
+  .infoToDoList{
+    margin-top:0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infoToDoList > strong{
+    margin-bottom: 1rem;
+  }
+
+  .form > textarea{
+    width: 15rem;
+  }
+}
