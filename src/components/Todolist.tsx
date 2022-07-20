@@ -62,20 +62,19 @@ export function TodoList() {
   }
 
   function changeTaskCompleted(key: string) {
-    const newListOfTasksWithoNoChange = listOfTasks.filter(
-      (task) => task.id !== key
-    );
+    const newTaskList = listOfTasks.map(task => {
+      if (task.id === key){
+        return {... task, isFinished: !task.isFinished};
+      } else{
+        return task
+      }
+    })
 
-    const newTaskChanged = listOfTasks.filter((task) => task.id == key);
-    newTaskChanged[0].isFinished = !newTaskChanged[0].isFinished;
-
-    const newListOfTasks = [...newListOfTasksWithoNoChange, ...newTaskChanged];
-
-    const tasksFinished = newListOfTasks.filter(
+    const tasksFinished = newTaskList.filter(
       (task) => task.isFinished == true
     );
 
-    const tasksNotFinished = newListOfTasks.filter(
+    const tasksNotFinished = newTaskList.filter(
       (task) => task.isFinished != true
     );
 
